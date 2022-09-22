@@ -31,3 +31,19 @@ print(colors == ['red', 'green', 'blue', 'gray']) #True
 colors.remove('red') #удалить 'red'
 del colors[0] #удалить элемент
 print(colors)
+
+print(max(numbers)) #max
+print(min(numbers)) #mit
+print(sum(numbers)) #sum
+print(list(reversed(numbers))) #перевернуть
+print(sorted(numbers)) #по возрастанию
+print(sorted(numbers, reverse=True)) #по убыванию
+print(numbers[1:len(numbers)-1]) # срез от первого до последнего
+numbers[1:-2] = 7,8 #замета от 1 до -2
+print(numbers)
+numbers[2:3] = [] #удаление
+print(numbers)
+
+text = "1-2*3+12-6"
+res = eval(text)
+print(res)

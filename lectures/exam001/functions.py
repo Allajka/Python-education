@@ -17,3 +17,7 @@ print(f(28)) # None
 print(type(f(1))) # str
 print(type(f(2.3))) # int
 print(type(f(28))) # NoneType
+
+print('a', 'b', 'c')
+
+print(6//2)
