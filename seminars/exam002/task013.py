@@ -6,3 +6,18 @@
 
 n = input("Введите число n: ")
 print(int(n) + int(n+n) + int(n+n+n))
+
+# n = int(input('Введите число: '))
+# interim = n
+# l = 1
+# while interim // 10 > 0:
+#     interim = interim // 10
+#     l += 1
+
+# d = int(input('Введите количество слагаемых: '))
+# result = 0
+# i = 0
+# for i in range(d):
+#     result = result + n*(d-i)*10*(i*l)
+#     i += 1
+# print(result)
