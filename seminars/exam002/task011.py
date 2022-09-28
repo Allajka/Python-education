@@ -1,6 +1,5 @@
 #2 Сформировать список из  N членов последовательности. 
-#Для N = 5: 1, -3, 9, -27, 81 и т.д.
-# https://docs.google.com/document/d/1UngwpzzA0buLowV3Sw0luH172b03XFoh37uccRz3x_8/edit#heading=h.m7evrbvl3c8a
+#Для N = 5: 1, -3, 9, -27, 81 и т.д.*(-3)
 
 n = int(input("Введите число N: "))
 list = []

@@ -6,17 +6,10 @@ expenses = int(input("Введите издержки фирмы: "))
 workers = int(input("Введите численность сотрудников фирмы: "))
 
 if revenue > expenses:
-    print("Profit")
-    print((revenue-expenses)/workers)
+    print(f"Прибыль = {revenue - expenses}.")
+    print(f"Рентабельность выручки = {(revenue-expenses)/revenue} %")
+    print(f"Прибыль фирмы на одного сотрудника составила: {(revenue-expenses)/workers}")
 elif revenue < expenses:
-    print("Loss")
+    print("Убыток")
 elif revenue == expenses:
-    print("Balance")
-
-# a = int(input("Введите значения выручки: "))
-# b = int(input("Введите значения издержек фирмы: "))
-# if a > b:
-#     print(f"Прибыль составила = {a-b}, рентабельность составила {(a-b)/a}")
-#     c = int(input("Введите кол-во сотрудников: "))
-#     print(f"Прибыль фирмы на одного сотрудника составила: {(a-b)/c}")
-# else: print("Убыток")
+    print("В ноль")
