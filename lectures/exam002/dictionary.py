@@ -15,3 +15,7 @@ for k in dictionary.keys():
 # пройтись по всем значениям
 for k in dictionary.values():
     print(k)
+
+for item in dictionary:
+    print('{}: {}'.format(item, dictionary[item]))
+print(type(dictionary))
