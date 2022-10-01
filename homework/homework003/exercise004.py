@@ -16,3 +16,20 @@ if save_number > 0:
     print(int(binary_number))
 elif save_number < 0:
     print(-int(binary_number))
+
+# Вариант со строкой
+# user_number = fun.check_input_number('Введите целое число: ')
+# save_number = user_number
+# binary_number = ''
+# user_number = abs(user_number)
+# while user_number > 0:
+#     if user_number % 2 == 0:
+#         binary_number = '0' + binary_number
+#     else:
+#         binary_number = '1' + binary_number
+#     user_number //= 2
+#
+# if save_number > 0:
+#     print(int(binary_number))
+# elif save_number < 0:
+#     print(-int(binary_number))
