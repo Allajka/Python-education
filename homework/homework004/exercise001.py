@@ -21,6 +21,7 @@ number_pi = number_pi ** (-1)
 number_pi_format = round(number_pi, symbol_comma)
 print(number_pi_format)
 
+
 # Вариант Алгоритм Чудновского π(количество знаков после запятой от 1 до 15)
 # import functions as fun
 #

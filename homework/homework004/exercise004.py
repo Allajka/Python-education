@@ -6,5 +6,29 @@
 # список: ["123", "234", 123, "567"], ищем: "123", ответ: -1
 # список: [], ищем: "123", ответ: -1
 
-list_values = ["qwe", "asd", "zxc", "qwe", "ertqwe"]
+list_values = ["йцу", "фыв", "ячс", "цук", "йцукен", "йцу"]
+control = "йцу"
+count = 0
+index = 0
+for i in list_values:
+    if i == control:
+        count += 1
+    if count == 2:
+        break
+    index += 1
+if count == 2:
+    print(f'Второе вхождение строки "{control}" есть, позиция элемента в списке {index}.')
+else:
+    print(f'Нет второго вхождения строки "{control}" в список.')
 
+
+# Поиск через метод remove() + index() + try, except
+list_values = ["йцу", "фыв", "ячс", "цук", "йцукен", "йцу"]
+control = "йцу"
+
+try:
+    list_values.remove(control)
+    index = list_values.index(control)
+    print(f'Второе вхождение строки "{control}" есть, позиция элемента в списке {index+1}.')
+except ValueError:
+    print(f'Нет второго вхождения строки "{control}" в список.')
