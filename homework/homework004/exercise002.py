@@ -13,7 +13,7 @@ def simple_number(number):
 
 def create_simple_list(last_Number):
     simple_list = [2]
-    for i in range(3, last_Number, 2):
+    for i in range(3, last_Number+1, 2):
         if simple_number(i):
             simple_list.append(i)
     return simple_list
@@ -34,4 +34,8 @@ def return_simple_multiplication_number(number, simple_list):
 
 user_number = abs(fun.check_input_number('Введите целое положительное число: '))
 simple_list = create_simple_list(user_number)
-return_simple_multiplication_number(user_number, simple_list)
+if user_number == 0:
+    print(f"Введен 0.")
+elif user_number in simple_list:
+    print(f"{user_number} = 1 * {user_number}")
+else: return_simple_multiplication_number(user_number, simple_list)

@@ -23,12 +23,12 @@ else:
 
 
 # Поиск через метод remove() + index() + try, except
-list_values = ["йцу", "фыв", "ячс", "цук", "йцукен", "йцу"]
-control = "йцу"
-
-try:
-    list_values.remove(control)
-    index = list_values.index(control)
-    print(f'Второе вхождение строки "{control}" есть, позиция элемента в списке {index+1}.')
-except ValueError:
-    print(f'Нет второго вхождения строки "{control}" в список.')
+# list_values = ["йцу", "фыв", "ячс", "цук", "йцукен", "йцу"]
+# control = "йцу"
+#
+# try:
+#     list_values.remove(control)
+#     index = list_values.index(control)
+#     print(f'Второе вхождение строки "{control}" есть, позиция элемента в списке {index+1}.')
+# except ValueError:
+#     print(f'Нет второго вхождения строки "{control}" в список.')
