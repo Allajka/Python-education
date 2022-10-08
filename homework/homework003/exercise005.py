@@ -7,5 +7,8 @@ print('Программа выводит последовательность ч
 n = abs(fun.check_input_number('Введите n: '))
 fibonacci = []
 for i in range(-n, n + 1):
-    fibonacci.append(fun.fibonacci(i))
+    fibonacci.append(fun.negafibonacci(i))
 print(fibonacci, end='')
+
+
+

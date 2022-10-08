@@ -33,3 +33,11 @@ def fibonacci(n):
             return fibonacci(n + 1) - (-fibonacci(n + 2))
     elif n == 0:
         return 0
+
+def negafibonacci(number):
+    if number in [1, 2]:
+        return 1
+    if number < 0:
+        return negafibonacci(-number) * (-1) ** (-number + 1)
+    else:
+        return negafibonacci(number - 1) + negafibonacci(number - 2)
