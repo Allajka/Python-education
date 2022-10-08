@@ -2,18 +2,32 @@
 # Напишите программу, которая выведет список неповторяющихся элементов исходной последовательности.
 # Если в первом списке число повторялось, добавлять его не нужно.
 
+# Через map(для ввода) + filter + count
+converted_list = list(map(int, input('Введите список элементов через пробел: ').split()))
+filtered_list = list(filter(lambda x: converted_list.count(x) == 1, converted_list))
+print(filtered_list)
+
+
+# Через List Comprehension
+converted_list = list(map(int, input().split()))
+filtered_list = [x for x in converted_list if converted_list.count(x) == 1]
+print(filtered_list)
+
+
 # С использованием функции count()
-user_list = list(input('Введите список элементов через пробел: ').split())
-unique_list = []
+# user_numbers = list(map(int, input('Введите список элементов через пробел: ').split()))
+# user_list = input('Введите список элементов через пробел: ').split()
+# unique_list = []
+#
+# for i in user_list:
+#     if user_list.count(i) == 1:
+#         unique_list.append(i)
+#
+# print(user_list)
+# print(unique_list)
 
-for i in user_list:
-    if user_list.count(i) == 1:
-        unique_list.append(i)
 
-print(user_list)
-print(unique_list)
-
-# С через цикл
+# Через цикл
 # user_list = list(input('Введите список элементов через пробел: ').split())
 # unique_list = []
 #
