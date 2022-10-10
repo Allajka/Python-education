@@ -1,22 +1,19 @@
 # Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных.
-# Пыталась обойтись без листа, сразу кодировать в строку, но тогда была проблема - как потом восстановить данные если значений больше 10.
-def coding_information_list(row):
-    coding_list = []
+def coding_information(row):
+    coding = ''
     count = 0
     for i in range(len(row) - 1):
         if row[i] == row[i + 1]:
             count += 1
             if i == len(row) - 2:
                 count += 1
-                coding_list.append(str(count))
-                coding_list.append(row[i])
+                coding += str(count) + row[i]
                 count = 0
         else:
             count += 1
-            coding_list.append(str(count))
-            coding_list.append(row[i])
+            coding += str(count) + row[i]
             count = 0
-    return coding_list
+    return coding
 
 def recovery(row):
     decode = ''
@@ -29,12 +26,11 @@ def recovery(row):
             count = ''
     return decode
 
-string = "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwffrtg"
-coding_list = coding_information_list(string)
-coding_string = ''.join(coding_list)
+user_string = "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwffrtg"
+coding_string = coding_information(user_string)
 recovery = recovery(coding_string)
 
 print('RLE алгоритм: модуль сжатия и восстановления данных.\n')
-print(f'Исходные данные: {string}')
+print(f'Исходные данные: {user_string}')
 print(f'Закодированный вариант: {coding_string}')
 print(f'Восстановление данных: {recovery}')
