@@ -13,9 +13,9 @@ def polynomial(k, largest, smallest):
         elif i == k:
             l[i] += " = 0"
         elif int(l[i]) == 1:
-            l[i] = f"x**{k-i}"
+            l[i] = f"x^{k-i}"
         else:
-            l[i] += f"*x**{k-i}"
+            l[i] += f"*x^{k-i}"
 
     for i in l:
         if i == "0":
