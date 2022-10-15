@@ -67,16 +67,16 @@ def patronymic(sex):
         randint(0, len(man_patronymic) - 1)]
 
 
-def date_birth():
-    month = randint(1, 12)
-    if month in [1, 3, 5, 7, 8, 10, 12]:
-        day = randint(1, 31)
-    elif month == 2:
-        day = randint(1, 28)
-    else:
-        day = randint(1, 30)
-    year = randint(1965, 2003)
-    return f"{day}.{month}.{year}"  # .format("%d-%m-%Y")
+# def date_birth():
+#     month = randint(1, 12)
+#     if month in [1, 3, 5, 7, 8, 10, 12]:
+#         day = randint(1, 31)
+#     elif month == 2:
+#         day = randint(1, 28)
+#     else:
+#         day = randint(1, 30)
+#     year = randint(1965, 2003)
+#     return f"{day}.{month}.{year}"  # .format("%d-%m-%Y")
 
 
 def phone():

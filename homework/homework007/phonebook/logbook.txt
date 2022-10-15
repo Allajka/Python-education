@@ -1,0 +1,3 @@
+17:10: new entry: phone: +7 90640652236 surname: Звезда name: Фаина patronymic: Файнана
+17:11: new entry: phone: +7901612335 surname: Пупков name: Валера patronymic: Невезучий
+17:13: new entry: phone: +25 surname: РљС‚Рѕ-С‚Рѕ name: РљС‚РѕС‚ patronymic: РљС‚РѕРєРѕРІРёС‡
