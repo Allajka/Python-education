@@ -17,5 +17,4 @@ def pressure_logger(data):
 def wind_speed_logger(data):
     time = dt.now().strftime('%H:%M')  # маска для вывода
     with open('log.csv', 'a')  as file: # открытие для добавления данных
-        file.write('{};wind_speed;{}\n'
-                   .format(time, data))
+        file.write('{};wind_speed;{}\n'.format(time, data))
