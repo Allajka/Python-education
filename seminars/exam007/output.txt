@@ -1,0 +1,6 @@
+11:54: expression: 6.0 - 2.0 = 4.0
+11:55: expression: 5.0 * 8.0 = 40.0
+11:55: expression: 4.0 / 8.0 = 0.5
+11:56: expression: 6.0 * 6.0 = 36.0
+12:02: expression: 8.0 / 0.0 = None
+12:04: expression: -5.0 * -8.0 = 40.0
