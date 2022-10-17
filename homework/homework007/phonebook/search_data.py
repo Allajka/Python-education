@@ -1,5 +1,6 @@
 import print_all_data
 
+
 def search_phone(data, search_data):
     search_data = search_data.replace(' ', '')
     counter = 0
@@ -14,6 +15,10 @@ def search_phone(data, search_data):
 
 def search_surname(data, search_data):
     search_data.title()
+    counter = 0
     for i in data:
         if search_data in i:
             print(i)
+            counter += 1
+    if counter == 0:
+        print("Информация отсутствует")

@@ -1,9 +1,4 @@
 # Юзер-интерфейс, то что будет видеть пользователь, его взаимодействие с программой
-import reading_data
-import print_all_data
-import add_data
-import logger
-import search
 
 def print_data(data):
     print(data)
@@ -35,9 +30,8 @@ def check_full_name(text):
 def check_phone():
     flag = False
     while flag == False:
-        phone = input("phone: +7 ")
-        temp = phone.replace(' ', '')
-        if temp.isdigit() and len(temp) == 10:
+        phone = input("phone: +7 ").replace(' ', '')
+        if phone.isdigit() and len(phone) == 10:
             flag = True
             return phone
         else:
@@ -57,28 +51,3 @@ def input_check_choice(text, control_numbers):
                 flag == False
         except ValueError:
             flag == False
-
-
-def answer(number):
-    if number == 1:
-        list_data = reading_data.get_info('uses.csv')
-        print_all_data.print_all(list_data)
-        print_data(f"\nТелефонный справочник состоит из {len(list_data)} записей")
-        logger.result_loger(f'Запрос на вывод информации')
-    elif number == 2:
-        user_data = input_phonebook()
-        add_data.append_data("uses.csv", user_data)
-        logger.result_loger(f'Новая запись {user_data}')
-        print_data("\nДанные успешно добавлены в телефонный справочник.")
-    elif number == 3:
-        list_data = reading_data.get_info('uses.csv')
-        print_data("\nВам необходимо найти:")
-        answer = input_check_choice("1. Номер телефона\n2. Фамилию, Имя, Отчество\n Введите цифру: ", 2)
-        if answer == 1:
-            phone = check_phone()
-            search.search_phone(list_data, phone)
-            logger.result_loger(f'Запрос на поиск {phone}')
-        elif answer == 2:
-            surname = check_full_name("surname: ")
-            search.search_surname(list_data, surname)
-            logger.result_loger(f'Запрос на поиск {surname}')
