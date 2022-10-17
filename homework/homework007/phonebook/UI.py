@@ -38,6 +38,16 @@ def check_phone():
             print("Некорректный ввод, повторите попытку.")
 
 
+def check_phone_search():
+    flag = False
+    while flag == False:
+        phone = input("phone: +7 ").replace(' ', '')
+        if phone.isdigit():
+            flag = True
+            return phone
+        else:
+            print("Некорректный ввод, повторите попытку.")
+
 def input_check_choice(text, control_numbers):
     flag = False
     while flag == False:

@@ -26,7 +26,7 @@ def search():
     UI.print_data("\nВам необходимо найти:")
     answer = UI.input_check_choice("1. Номер телефона\n2. Фамилию, Имя, Отчество\n Введите цифру: ", 2)
     if answer == 1:
-        phone = UI.check_phone()
+        phone = UI.check_phone_search()
         search_data.search_phone(list_data, phone)
         logger.result_loger(f'Запрос на поиск {phone}')
     elif answer == 2:
@@ -42,3 +42,43 @@ def deletion():
     list_data = deletion_data.delete_row(phone, list_data)
     list_data = deletion_data.delete_row_empty(list_data)
     add_data.overwriting('uses.csv', list_data)
+
+
+def export_to():
+    UI.print_data("\nВыберите формат:")
+    answer = UI.input_check_choice("1. txt\n2. csv \n3. XML \n", 3)
+    if answer == 1:
+        add_contact_by_txt()
+    elif answer == 2:
+        add_contact_by_csv()
+    elif answer == 3:
+        add_contact_by_XML()
+
+
+def add_contact_by_txt():
+    list_data = reading_data.get_info('uses.csv')
+    with open('phonebook.txt', 'a', encoding='utf-8') as file:
+        for i in list_data:
+            file.write(f'{i},')
+            file.write('\n')
+
+def add_contact_by_csv():
+    list_data = reading_data.get_info('uses.csv')
+    with open('phonebook.csv', 'a', encoding='utf-8') as file:
+        for i in list_data:
+            file.write(f'{i},')
+            file.write('\n')
+
+def add_contact_by_csv():
+    list_data = reading_data.get_info('uses.csv')
+    with open('phonebook.csv', 'a', encoding='utf-8') as file:
+        for i in list_data:
+            file.write(f'{i},')
+            file.write('\n')
+
+def add_contact_by_XML():
+    list_data = reading_data.get_info('uses.csv')
+    with open('phonebook.XML', 'a', encoding='utf-8') as file:
+        for i in list_data:
+            file.write(f'{i},')
+            file.write('\n')
