@@ -13,7 +13,6 @@ def pascal(start_list, end):
     return start_list[end]
 
 
-start_list = [[1]]
-end = int(input())
+start_list, end = [[1]], int(input())
 
 print(pascal(start_list, end))
